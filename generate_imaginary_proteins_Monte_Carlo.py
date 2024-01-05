@@ -1,4 +1,4 @@
-#This function serves to generate imaginary proteins. Residue cluster size of approximately 15 residues
+#This function serves to generate imaginary proteins. Residue cluster size of approximately 10 residues
 #renders a Q1 equation with approximately the same slop as that identified
 #in real proteins.
 
@@ -27,7 +27,7 @@ def obtain_types_and_coordinates_imaginary_protein():
     limit_b_OZ = 80
     
     # Number of residues per cluster:
-    residues_per_cluster = 15
+    residues_per_cluster = 10
     # Initialize also auxiliary variables:
     #Counter of current total residues:
     counter_list_positions_residues = 0
@@ -153,18 +153,15 @@ def obtain_types_and_coordinates_imaginary_protein():
                 else:                  
                     #Two conditions must be met:
                     flag_distance = 1
-                    flag_2_distance = 0
 
                     #i)
-                    #Check that the distance with at least two of the other already
+                    #Check that the distance with at least one of the other already
                     #existing amino acids in the cluster is lower than 3.8 Angstroms:
                     for position_residue_in_cluster in list_positions_residues_in_cluster:
                         x1, y1, z1 = possible_new_residue
                         x2, y2, z2 = position_residue_in_cluster
                         distance_check = math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2)
                         if (distance_check < 3.8):
-                            flag_2_distance += 1
-                        if (flag_2_distance == 2):
                             flag_distance = 0  
                             break  
                                     
