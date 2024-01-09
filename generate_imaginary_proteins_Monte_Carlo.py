@@ -1,4 +1,4 @@
-#This function serves to generate imaginary proteins. Residue cluster size of approximately 10 residues
+#This function serves to generate imaginary proteins. Residue cluster size of approximately 11-12 residues
 #renders a Q1 equation with approximately the same slop as that identified
 #in real proteins.
 
@@ -27,7 +27,7 @@ def obtain_types_and_coordinates_imaginary_protein():
     limit_b_OZ = 80
     
     # Number of residues per cluster:
-    residues_per_cluster = 10
+    residues_per_cluster = 12
     # Initialize also auxiliary variables:
     #Counter of current total residues:
     counter_list_positions_residues = 0
