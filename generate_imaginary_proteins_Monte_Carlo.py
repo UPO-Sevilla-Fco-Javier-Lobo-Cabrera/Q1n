@@ -1,4 +1,4 @@
-#This function serves to generate imaginary proteins. Residue cluster size of approximately 11-12 residues
+#This function serves to generate imaginary proteins. Residue cluster size of approximately 8 residues
 #renders a Q1 equation with approximately the same slop as that identified
 #in real proteins.
 
